@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- Custom PreHead code is injected here -->
+<head>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta charset="utf-8"/>
+<!-- Builtin injector for disabling cache -->
+<meta content="no-cache" http-equiv="pragma"/>
+<!-- Set the title bar of the page -->
+<title>Retro Bowl College</title>
+<!-- Custom PreStyle code is injected here -->
+<!-- Set the background colour of the document -->
+<style>
+        body {
+            background: #0;
+            color: #cccccc;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        canvas {
+            image-rendering: pixelated;
+            -webkit-interpolation-mode: nearest-neighbor;
+            -ms-touch-action: none;
+            touch-action: none;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        :-webkit-full-screen #canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        :-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Custom Runner Styles */
+        div.gm4html5_div_class {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        div.gm4html5_login {
+            padding: 20px;
+            position: absolute;
+            border: solid 2px #000000;
+            background-color: #404040;
+            color: #00ff00;
+            border-radius: 15px;
+            box-shadow: #101010 20px 20px 40px;
+        }
+
+        div.gm4html5_cancel_button {
+            float: right;
+        }
+
+        div.gm4html5_login_button {
+            float: left;
+        }
+
+        div.gm4html5_login_header {
+            text-align: center;
+        }
+
+        /* END - Custom Runner Styles */
+        :-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+<!-- Custom PostStyle code is injected here -->
+<!-- Builtin injector for injecting flurry analytics code -->
+</head>
+<!-- Custom PostHead code is injected here -->
+<!-- Custom PreBody code is injected here -->
+<body>
+<div class="gm4html5_div_class" id="gm4html5_div_id">
+<!-- Builtin injector for splash screen -->
+<img alt="GameMaker:HTML5 loading screen" id="GM4HTML5_loadingscreen" src="data:image/png;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn/AI6nNo3ljlT9AAAAAElFTkSuQmCC" style="display:none;"/>
+<!-- Create the canvas element the game draws to -->
+<canvas height="480" id="canvas" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);" width="853">
+<p>Your browser doesn't support HTML5 canvas.</p>
+</canvas>
+</div>
+<!-- Run the game code -->
+<script src="html5game/RetroBowl.js?cachebust=1606201936" type="text/javascript"></script>
+<!-- Builtin injector for injecting runner path -->
+<!-- NO POKI -->
+<!-- <script>window.onload = GameMaker_Init;</script> -->
+<!-- YES POKI -->
+<!-- Poki start -->
+<script>(()=>{var e=function(e){var n=RegExp("[?&]"+e+"=([^&]*)").exec(window.location.search);return n&&decodeURIComponent(n[1].replace(/\+/g," "))},n="kids"===e("tag"),o=new(function(){function e(){var e=this;this.queue=[],this.init=function(n){return void 0===n&&(n={}),new Promise((function(o,t){e.enqueue("init",n,o,t)}))},this.rewardedBreak=function(){return new Promise((function(e){e(!1)}))},this.noArguments=function(n){return function(){e.enqueue(n)}},this.oneArgument=function(n){return function(o){e.enqueue(n,o)}},this.handleAutoResolvePromise=function(){return new Promise((function(e){e()}))},this.throwNotLoaded=function(){console.debug("PokiSDK is not loaded yet. Not all methods are available.")}}return e.prototype.enqueue=function(e,o,t,i){var r={fn:e,options:o,resolveFn:t,rejectFn:i};n?i&&i():this.queue.push(r)},e.prototype.dequeue=function(){for(var e=function(){var e=n.queue.shift(),o=e,t=o.fn,i=o.options;"function"==typeof window.PokiSDK[t]?(null==e?void 0:e.resolveFn)||(null==e?void 0:e.rejectFn)?window.PokiSDK[t](i).then((function(){for(var n=[],o=0;o<arguments.length;o++)n[o]=arguments[o];"function"==typeof e.resolveFn&&e.resolveFn.apply(e,n)})).catch((function(){for(var n=[],o=0;o<arguments.length;o++)n[o]=arguments[o];"function"==typeof e.rejectFn&&e.rejectFn.apply(e,n)})):void 0!==(null==e?void 0:e.fn)&&window.PokiSDK[t](i):console.error("Cannot execute "+e.fn)},n=this;this.queue.length>0;)e()},e}());window.PokiSDK={init:o.init,initWithVideoHB:o.init,customEvent:o.throwNotLoaded,commercialBreak:o.handleAutoResolvePromise,rewardedBreak:o.rewardedBreak,displayAd:o.throwNotLoaded,destroyAd:o.throwNotLoaded,getLeaderboard:o.handleAutoResolvePromise,getSharableURL:function(){return new Promise((function(e,n){return n()}))},getURLParam:function(n){return e("gd"+n)||e(n)||""}},["disableProgrammatic","gameLoadingStart","gameLoadingFinished","gameInteractive","roundStart","roundEnd","muteAd"].forEach((function(e){window.PokiSDK[e]=o.noArguments(e)})),["setDebug","gameplayStart","gameplayStop","gameLoadingProgress","happyTime","setPlayerAge","togglePlayerAdvertisingConsent","logError","sendHighscore","setDebugTouchOverlayController"].forEach((function(e){window.PokiSDK[e]=o.oneArgument(e)}));var t,i=((t=window.pokiSDKVersion)||(t=e("ab")||"v2.263.0"),"poki-sdk-"+(n?"kids":"core")+"-"+t+".js"),r=document.createElement("script");r.setAttribute("src",i),r.setAttribute("type","text/javascript"),r.setAttribute("crossOrigin","anonymous"),r.onload=function(){return o.dequeue()},document.head.appendChild(r)})();</script>
+<script>(function () {
+            function fin(ok) {
+                //var _0x1918 = ['top', 'indexOf', 'aHR0cHM6Ly9wb2tpLmNvbS9zaXRlbG9jaw==', 'hostname', 'length', 'location', 'LnBva2ktZ2RuLmNvbQ==', 'href']; (function (_0x4a02b5, _0x5c0c3d) { var _0x56a85d = function (_0x375c0e) { while (--_0x375c0e) { _0x4a02b5['push'](_0x4a02b5['shift']()); } }; _0x56a85d(++_0x5c0c3d); }(_0x1918, 0x1ae)); var _0xcdc9 = function (_0x4a02b5, _0x5c0c3d) { _0x4a02b5 = _0x4a02b5 - 0x0; var _0x56a85d = _0x1918[_0x4a02b5]; return _0x56a85d; }; (function checkInit() { var _0x151adb = ['bG9jYWxob3N0', 'LnBva2kuY29t', _0xcdc9('0x0')]; var _0x219654 = ![]; var _0x558823 = window[_0xcdc9('0x7')][_0xcdc9('0x5')]; for (var _0x220888 = 0x0; _0x220888 < _0x151adb[_0xcdc9('0x6')]; _0x220888++) { var _0x4a2f49 = atob(_0x151adb[_0x220888]); if (_0x558823[_0xcdc9('0x3')](_0x4a2f49, _0x558823['length'] - _0x4a2f49['length']) !== -0x1) { _0x219654 = !![]; break; } } if (!_0x219654) { var _0xcff8e8 = _0xcdc9('0x4'); var _0x3296f7 = atob(_0xcff8e8); window['location'][_0xcdc9('0x1')] = _0x3296f7; this[_0xcdc9('0x2')][_0xcdc9('0x7')] !== this[_0xcdc9('0x7')] && (this[_0xcdc9('0x2')][_0xcdc9('0x7')] = this[_0xcdc9('0x7')]); } }());
+                window.PokiSDK_OK = ok;
+                GameMaker_Init();
+            }
+            window.addEventListener("load", function (_) {
+                window.PokiSDK_loadState = 0;
+                if (window.PokiSDK) {
+                    PokiSDK.init().then(function () {
+                        fin(true);
+                    }).catch(function () {
+                        fin(false);
+                    });
+                } else {
+                    window.PokiSDK = null;
+                    fin(false);
+                }
+            });
+        })();
+    </script>
+<!-- Poki end -->
+<!-- Builtin injector for injecting google analytics code -->
+</body>
+<!-- Custom PostBody code is injected here -->
+</html>

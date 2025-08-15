@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="classroom6x.gitlab.io" name="website">
+<title>Rowdy2HTML5 Unblocked - ClassRoom6x</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" id="viewport" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<link href="./favicon.png" rel="shortcut icon" type="image/png"/>
+<script>var __loadWithProgress = function __loadWithProgress(filesToLoad, progressListener, completionCallback) {
+	var progressManager = {},
+		interval;
+	var __loadedFiles = {};
+
+	var scriptsToLoad = Object.keys(filesToLoad).filter(url => url.indexOf('.js') > 0);
+	
+	var __loadFile = function __loadFile(url) {
+		return new Promise(function (resolve, reject) {
+			var request = new XMLHttpRequest();
+			request.open('GET', url);
+			request.responseType = 'blob';
+			
+			request.onload = function () {
+				if (request.status === 200) {
+					__loadedFiles[url] = request.response;
+					resolve(request.response);
+				} else reject();
+			};
+			
+			request.onerror = function () {
+				reject();
+			};
+			
+			request.onprogress = function (event) {
+				progressManager[url] = {
+					loaded: event.loaded,
+					total: filesToLoad[url].total
+				};
+			};
+			
+			request.send();
+		});
+	};
+
+	var __loadFiles = function __loadFiles() {
+		var urls = Object.keys(filesToLoad);
+		var promises = urls.map(url => __loadFile(url));
+		interval = setInterval(function () {
+			var currentProgress = __getProgress() || 0;
+			progressListener(currentProgress);
+			if (currentProgress === 1 && Object.keys(progressManager).length === urls.length) clearInterval(interval);
+		}, 50);
+		return Promise.all(promises);
+	};
+
+	var __getProgress = function __getProgress() {
+		var loaded = 0,
+			total = 0;
+		Object.keys(progressManager).forEach(function (url) {
+			loaded += progressManager[url].loaded;
+			total += progressManager[url].total;
+		});
+		return loaded / total;
+	};
+
+	var urlCreator = window.URL || window.webkitURL;
+
+	var __prepareScripts = function __prepareScripts() {
+		var scriptCount = scriptsToLoad.length;
+		scriptsToLoad.forEach(url => {
+			var script = document.createElement('script'),
+			src = urlCreator.createObjectURL(__loadedFiles[url]);
+			script.src = src;
+			script.onload = function(){
+				if(--scriptCount == 0)
+				{
+					completionCallback();
+				}
+			};
+			document.body.appendChild(script);
+		});
+	};
+
+	__loadFiles().then(__prepareScripts);
+}</script>
+<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		< !-- modified by SadiQ2 #openfl-content {
+			background: #000000;
+			width: 640px;
+			height: 360px;
+		}
+
+		-->#openfl-content {
+			background: #000000;
+			width: 100%;
+			height: 100%;
+		}
+
+		#openfl-content canvas {
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		#progress {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+		}
+	</style>
+</meta></head>
+<body style="overflow:hidden;">
+<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this
+		page.</noscript>
+<div id="openfl-content"><progress id="progress" max="1" value="0"></progress></div>
+<script>
+		var __filesToLoad = {
+			"./lib/howler.min.js": {total: 34443},
+			"./lib/pako.min.js": {total: 46984},
+			"./lib/FileSaver.min.js": {total: 2446},
+			"./Rowdy2HTML5.js": {total: 4980926}
+		}
+		
+		var __progressBar;
+		
+		var __progressListener = function __progressListener(progress) {
+			if(!__progressBar) __progressBar = document.getElementById("progress");
+			if(__progressBar) __progressBar.value = progress;
+		};
+
+		var __completionCallback = function __completionCallback() {
+			__progressBar.parentNode.removeChild(__progressBar);
+			lime.embed ("Rowdy2HTML5", "openfl-content", 640, 360, { parameters: {} });
+		};
+
+		__loadWithProgress(__filesToLoad, __progressListener, __completionCallback);
+		
+	</script>
+</body>
+</html>
